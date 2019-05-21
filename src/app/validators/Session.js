@@ -5,6 +5,6 @@ module.exports = {
     email: Joi.string()
       .email()
       .required(),
-    passwor: Joi.string().required()
+    password: Joi.string().required()
   }
 }

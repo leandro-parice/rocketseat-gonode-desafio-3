@@ -9,6 +9,7 @@ const authMiddleware = require('./app/middlewares/auth')
 const controllers = require('./app/controllers')
 const validators = require('./app/validators')
 
+routes.get('/users', handle(controllers.UserController.index))
 routes.post(
   '/users',
   validate(validators.User),
@@ -38,6 +39,7 @@ routes.put(
 )
 routes.delete('/ads/:id', handle(controllers.AdController.destroy))
 
+routes.get('/purchases', handle(controllers.PurchaseController.index))
 routes.post(
   '/purchases',
   validate(validators.Purchase),
