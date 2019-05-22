@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const mongoosePaginate = require('mongoose-paginate')
 
-const PurcharseSchema = new mongoose.Schema({
+const PurchaseSchema = new mongoose.Schema({
   ad: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Ad',
@@ -17,6 +17,6 @@ const PurcharseSchema = new mongoose.Schema({
   }
 })
 
-PurcharseSchema.plugin(mongoosePaginate)
+PurchaseSchema.plugin(mongoosePaginate)
 
-module.exports = mongoose.model('Purcharse', PurcharseSchema)
+module.exports = mongoose.model('Purchase', PurchaseSchema)

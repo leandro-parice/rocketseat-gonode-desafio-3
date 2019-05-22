@@ -46,4 +46,9 @@ routes.post(
   handle(controllers.PurchaseController.store)
 )
 
+routes.get(
+  '/purchases/:id/accept',
+  handle(controllers.PurchaseController.accept)
+)
+
 module.exports = routes

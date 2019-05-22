@@ -23,7 +23,7 @@ class AdController {
     const ads = await Ad.paginate(filters, {
       page: req.query.page || 1,
       limit: 20,
-      populate: ['author'],
+      populate: ['author', 'purchasedBy'],
       sort: '-createdAt'
     })
     return res.json(ads)
